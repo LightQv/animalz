@@ -30,7 +30,7 @@ export default function Header() {
       <ul className={styles.navContainer}>
         <li className={styles.linkContainer}>
           <NavLink
-            to="/profile/1"
+            to="/profile/0"
             className={({ isActive }) =>
               isActive ? styles.activeNavContent : styles.navContent
             }
