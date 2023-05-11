@@ -13,11 +13,6 @@
         "state": "Rhône-Alpes",
         "country": "France"
       },
-      "picture": {
-        "large": "./frontend/src/assets/images/Lucie.jpg",
-        "medium": "",
-        "thumbnail": ""
-      },
       "language": "french",
       "totem_animal": "cat",
       "climate_animal": "polar bear", 
