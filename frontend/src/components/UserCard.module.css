@@ -1,15 +1,14 @@
 .userCard {
   position: relative;
-  height: 12rem;
+  height: 14rem;
   padding: 0.75rem;
   border-radius: 1rem;
   border: 1px solid var(--dark-green);
   background: linear-gradient(145deg, transparent, var(--black));
   box-shadow: 0 0 5px grey;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
+  flex-direction: column-reverse;
+  justify-content: space-between;
   overflow: hidden;
 }
 
@@ -23,10 +22,34 @@
   background: linear-gradient(180deg, transparent, var(--black));
 }
 
+.userCard::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 10%;
+  width: 100%;
+  background: linear-gradient(0deg, transparent, var(--black));
+}
+
 .userTitle {
   position: relative;
   display: flex;
+  justify-content: space-between;
+  align-items: end;
   color: var(--yellow);
   font-size: 0.9rem;
+  z-index: 1;
+}
+
+.likedImg,
+.favoriteImg,
+.climateImg {
+  width: 1.5rem;
+}
+
+.featuresContainer {
+  position: relative;
+  align-self: flex-end;
   z-index: 1;
 }

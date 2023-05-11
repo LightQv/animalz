@@ -37,15 +37,28 @@ export default function UserCard({ user }) {
           <h3>{`${
             user.name ? user.name.first : randomUsers[user.id].name.first
           }, ${user.age ? user.age : randomUsers[user.id].dob.age}`}</h3>
+          {user.climate_animal ? (
+            <img
+              src={climateAnimal}
+              alt="climate animal"
+              className={styles.climateImg}
+            />
+          ) : null}
         </div>
-        {usersInfos[0].liked_ids.includes(user.id) ? (
-          <img src={liked} alt="liked" />
-        ) : null}
-        {usersInfos[0].favorite_ids.includes(user.id) ? (
-          <img src={favorite} alt="liked" />
-        ) : null}
-        {user.climate_animal ? (
-          <img src={climateAnimal} alt="climate animal" />
+        {usersInfos[0].liked_ids.includes(user.id) ||
+        usersInfos[0].favorite_ids.includes(user.id) ? (
+          <div className={styles.featuresContainer}>
+            {usersInfos[0].liked_ids.includes(user.id) ? (
+              <img src={liked} alt="liked" className={styles.likedImg} />
+            ) : null}
+            {usersInfos[0].favorite_ids.includes(user.id) ? (
+              <img
+                src={favorite}
+                alt="favorite"
+                className={styles.favoriteImg}
+              />
+            ) : null}
+          </div>
         ) : null}
       </div>
     </Link>
