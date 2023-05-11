@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useFiltersContext } from "../contexts/FiltersContext";
 import avatar from "../assets/icons/avatar.png";
 import activeAvatar from "../assets/icons/avatar-active.png";
 import animalz from "../assets/icons/animalz.png";
@@ -13,12 +14,16 @@ import styles from "./Header.module.css";
 export default function Header() {
   const [showFilterPage, setShowFilterPage] = useState(true);
   const [filterBarActive, setFilterBarActive] = useState(false);
-  const [favorite, setFavorite] = useState(false);
-  const [like, setLike] = useState(false);
   const [languageFilter, setLanguageFilter] = useState("all");
   const [animalFilter, setAnimalFilter] = useState("all");
   const [culturalFilter, setCulturalFilter] = useState("all");
   const [locomotionFilter, setLocomotionFilter] = useState("all");
+  const {
+    setIsLikedFiltered,
+    isLikedFiltered,
+    setIsFavoriteFiltered,
+    isFavoriteFiltered,
+  } = useFiltersContext();
 
   const handleChangePage = () => {
     setShowFilterPage(false);
@@ -137,18 +142,22 @@ export default function Header() {
             <button
               type="button"
               className={
-                favorite ? styles.activeButtonContainer : styles.buttonContainer
+                isFavoriteFiltered
+                  ? styles.activeButtonContainer
+                  : styles.buttonContainer
               }
-              onClick={() => setFavorite(!favorite)}
+              onClick={() => setIsFavoriteFiltered(!isFavoriteFiltered)}
             >
               Favorites
             </button>
             <button
               type="button"
               className={
-                like ? styles.activeButtonContainer : styles.buttonContainer
+                isLikedFiltered
+                  ? styles.activeButtonContainer
+                  : styles.buttonContainer
               }
-              onClick={() => setLike(!like)}
+              onClick={() => setIsLikedFiltered(!isLikedFiltered)}
             >
               Likes
             </button>
