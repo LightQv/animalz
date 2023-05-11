@@ -5,6 +5,7 @@
 }
 
 .topInfos {
+  height: 12rem;
   margin-top: 2rem;
   display: flex;
   flex-direction: row;

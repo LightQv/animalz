@@ -55,8 +55,13 @@ export default function ProfileTopInfos() {
         />
         <div className={styles.mainInfos}>
           <h3>
-            {randomUsers[id].name.first} {randomUsers[id].name.last},{" "}
-            {randomUsers[id].dob.age}
+            {usersInfos[id].name
+              ? usersInfos[id].name.first
+              : randomUsers[id].name.first}{" "}
+            {usersInfos[id].name
+              ? usersInfos[id].name.last
+              : randomUsers[id].name.last}
+            , {randomUsers[id].dob.age}
           </h3>
           <div>
             {usersInfos[id].totem_animal ? (
