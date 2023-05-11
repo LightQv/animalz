@@ -1,0 +1,9 @@
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 25px;
+    margin-inline: 50px;
+}
