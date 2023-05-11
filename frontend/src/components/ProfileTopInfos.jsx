@@ -4,7 +4,6 @@ import styles from "./ProfileTopInfos.module.css";
 
 export default function ProfileTopInfos() {
   const { images } = useFetchContext();
-  //  const url = "https://images.pexels.com/photos/";
 
   return (
     <div
