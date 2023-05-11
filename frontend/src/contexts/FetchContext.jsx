@@ -8,14 +8,18 @@ export default FetchContext;
 
 export function FetchContextProvider({ children }) {
   // States
-  const [usersInfos, setUsersInfos] = useState([]);
-  const [randomUsers, setRandomUsers] = useState([]);
+  const [usersInfos, setUsersInfos] = useState(null);
+  const [randomUsers, setRandomUsers] = useState(null);
   const [images, setImages] = useState([]);
 
   useEffect(() => {
     axios
       .get("http://localhost:4000/users")
       .then((response) => setUsersInfos(response.data));
+
+    axios
+      .get("https://randomuser.me/api/?results=8")
+      .then((response) => setRandomUsers(response.data.results));
   }, []);
 
   // Memo pour optimisation => empêche les rerenders intempestifs au moindre changement de state
