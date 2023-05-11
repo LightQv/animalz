@@ -1,0 +1,25 @@
+.homePage {
+  background-color: var(--dark-green);
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  height: 200px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 12px;
+}
+.button {
+  border-style: none;
+  color: var(--dark-green);
+  background-color: var(--yellow);
+  width: 8rem;
+  padding: 12px 12px;
+  border-radius: 6px;
+}

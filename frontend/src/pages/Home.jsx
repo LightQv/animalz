@@ -1,36 +1,22 @@
-import Counter from "../components/Counter";
-import logo from "../assets/logo.svg";
+import React from "react";
+import styles from "./Home.module.css";
 
 export default function Home() {
   return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Hello Vite + React !</p>
-
-      <Counter />
-
-      <p>
-        Edit <code>App.jsx</code> and save to test HMR updates.
-      </p>
-      <p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {" | "}
-        <a
-          className="App-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
-    </header>
+    <div className={styles.homePage}>
+      <img
+        src="../src/assets/logo/Animalz.png"
+        alt="logo"
+        className={styles.logo}
+      />
+      <div className={styles.buttons}>
+        <button type="button" className={styles.button}>
+          Register
+        </button>
+        <button type="button" className={styles.button}>
+          Log in
+        </button>
+      </div>
+    </div>
   );
 }
