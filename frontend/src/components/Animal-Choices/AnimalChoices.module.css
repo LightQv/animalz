@@ -1,0 +1,33 @@
+.animalChoicesmModal {
+  position: fixed;
+  z-index: 11;
+  width: 90vw;
+  height: 90vh;
+  background-color: var(--dark-green);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  color: var(--yellow);
+}
+.buttons {
+  margin-top: 2rem;
+  gap: 12px;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+}
+.animals {
+  background-color: var(--yellow);
+  height: 15rem;
+  width: 10rem;
+  border-style: none;
+  border-radius: 8px;
+  color: var(--dark-green);
+}
+.buttons h3,
+.buttons p {
+  margin-top: 0.5rem;
+  padding: 0 15px;
+}
