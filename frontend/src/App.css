@@ -14,3 +14,7 @@
   --yellow: rgb(255, 199, 66);
   --white: rgb(240, 240, 240);
 }
+
+body {
+  background-color: var(--light-green);
+}
