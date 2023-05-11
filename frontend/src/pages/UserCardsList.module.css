@@ -1,0 +1,30 @@
+.userCardPage {
+  width: 100%;
+  padding-top: calc(3.5rem + 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.userCardPage > h1 {
+  color: var(--yellow);
+}
+
+.userCardPage > h3 {
+  margin-bottom: 0.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  text-align: center;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.userCardList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+}

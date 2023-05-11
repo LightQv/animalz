@@ -1,0 +1,32 @@
+.userCard {
+  position: relative;
+  height: 12rem;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  border: 1px solid var(--dark-green);
+  background: linear-gradient(145deg, transparent, var(--black));
+  box-shadow: 0 0 5px grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.userCard::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 25%;
+  width: 100%;
+  background: linear-gradient(180deg, transparent, var(--black));
+}
+
+.userTitle {
+  position: relative;
+  display: flex;
+  color: var(--yellow);
+  font-size: 0.9rem;
+  z-index: 1;
+}

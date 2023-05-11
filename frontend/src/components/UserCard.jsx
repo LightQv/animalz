@@ -6,10 +6,19 @@ import styles from "./UserCard.module.css";
 export default function UserCard({ user }) {
   const { randomUsers } = useFetchContext();
   return (
-    <div className={styles.userCard}>
-      <img src={randomUsers[user.id].picture.large} alt={user.id} />
-      <h1>{user.name ? user.name.first : randomUsers[user.id].name.first}</h1>
-      <h2>{user.age ? user.age : randomUsers[user.id].dob.age}</h2>
+    <div
+      className={styles.userCard}
+      style={{
+        backgroundImage: `url(${randomUsers[user.id].picture.large})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+    >
+      <div className={styles.userTitle}>
+        <h3>{`${
+          user.name ? user.name.first : randomUsers[user.id].name.first
+        }, ${user.age ? user.age : randomUsers[user.id].dob.age}`}</h3>
+      </div>
     </div>
   );
 }

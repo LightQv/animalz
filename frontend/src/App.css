@@ -21,4 +21,5 @@ body {
 
 button {
   border-style: none;
+  cursor: pointer;
 }
