@@ -11,11 +11,14 @@ import activeFilter from "../assets/icons/filter-active.png";
 import styles from "./Header.module.css";
 
 export default function Header() {
-  const [showFilterPage, setShowFilterPage] = useState(false);
+  const [showFilterPage, setShowFilterPage] = useState(true);
   const [filterBarActive, setFilterBarActive] = useState(false);
   const [favorite, setFavorite] = useState(false);
   const [like, setLike] = useState(false);
   const [languageFilter, setLanguageFilter] = useState("all");
+  const [animalFilter, setAnimalFilter] = useState("all");
+  const [culturalFilter, setCulturalFilter] = useState("all");
+  const [locomotionFilter, setLocomotionFilter] = useState("all");
 
   const handleChangePage = () => {
     setShowFilterPage(false);
@@ -150,63 +153,240 @@ export default function Header() {
               Likes
             </button>
           </div>
-          <h3 className={styles.categoryTitle}>Language</h3>
-          <div className={styles.categoryContainer}>
-            <button
-              type="button"
-              className={
-                languageFilter === "all"
-                  ? styles.activeButtonContainer
-                  : styles.buttonContainer
-              }
-              onClick={() => setLanguageFilter("all")}
-            >
-              All
-            </button>
-            <button
-              type="button"
-              className={
-                languageFilter === "dutch"
-                  ? styles.activeButtonContainer
-                  : styles.buttonContainer
-              }
-              onClick={() => setLanguageFilter("dutch")}
-            >
-              Dutch
-            </button>
-            <button
-              type="button"
-              className={
-                languageFilter === "english"
-                  ? styles.activeButtonContainer
-                  : styles.buttonContainer
-              }
-              onClick={() => setLanguageFilter("english")}
-            >
-              English
-            </button>
-            <button
-              type="button"
-              className={
-                languageFilter === "french"
-                  ? styles.activeButtonContainer
-                  : styles.buttonContainer
-              }
-              onClick={() => setLanguageFilter("french")}
-            >
-              French
-            </button>
-            <button
-              type="button"
-              className={
-                languageFilter === "spanish"
-                  ? styles.activeButtonContainer
-                  : styles.buttonContainer
-              }
-              onClick={() => setLanguageFilter("spanish")}
-            >
-              Spanish
-            </button>
+          <div>
+            <h3 className={styles.categoryTitle}>Language</h3>
+            <div className={styles.categoryContainer}>
+              <button
+                type="button"
+                className={
+                  languageFilter === "all"
+                    ? styles.activeButtonContainer
+                    : styles.buttonContainer
+                }
+                onClick={() => setLanguageFilter("all")}
+              >
+                All
+              </button>
+              <button
+                type="button"
+                className={
+                  languageFilter === "dutch"
+                    ? styles.activeButtonContainer
+                    : styles.buttonContainer
+                }
+                onClick={() => setLanguageFilter("dutch")}
+              >
+                Dutch
+              </button>
+              <button
+                type="button"
+                className={
+                  languageFilter === "english"
+                    ? styles.activeButtonContainer
+                    : styles.buttonContainer
+                }
+                onClick={() => setLanguageFilter("english")}
+              >
+                English
+              </button>
+              <button
+                type="button"
+                className={
+                  languageFilter === "french"
+                    ? styles.activeButtonContainer
+                    : styles.buttonContainer
+                }
+                onClick={() => setLanguageFilter("french")}
+              >
+                French
+              </button>
+              <button
+                type="button"
+                className={
+                  languageFilter === "spanish"
+                    ? styles.activeButtonContainer
+                    : styles.buttonContainer
+                }
+                onClick={() => setLanguageFilter("spanish")}
+              >
+                Spanish
+              </button>
+            </div>
+            <h3 className={styles.categoryTitle}>Climate Animal</h3>
+            <div className={styles.categoryContainer}>
+              <button
+                type="button"
+                className={
+                  animalFilter === "all"
+                    ? styles.activeButtonContainer
+                    : styles.buttonContainer
+                }
+                onClick={() => setAnimalFilter("all")}
+              >
+                All
+              </button>
+              <button
+                type="button"
+                className={
+                  animalFilter === "fox"
+                    ? styles.activeButtonContainer
+                    : styles.buttonContainer
+                }
+                onClick={() => setAnimalFilter("fox")}
+              >
+                Fox
+              </button>
+              <button
+                type="button"
+                className={
+                  animalFilter === "frog"
+                    ? styles.activeButtonContainer
+                    : styles.buttonContainer
+                }
+                onClick={() => setAnimalFilter("frog")}
+              >
+                Frog
+              </button>
+              <button
+                type="button"
+                className={
+                  animalFilter === "bear"
+                    ? styles.activeButtonContainer
+                    : styles.buttonContainer
+                }
+                onClick={() => setAnimalFilter("bear")}
+              >
+                Polar Bear
+              </button>
+              <button
+                type="button"
+                className={
+                  animalFilter === "lion"
+                    ? styles.activeButtonContainer
+                    : styles.buttonContainer
+                }
+                onClick={() => setAnimalFilter("lion")}
+              >
+                Lion
+              </button>
+            </div>
+
+            <h3 className={styles.categoryTitle}>Cultural Interest</h3>
+            <div className={styles.categoryContainer}>
+              <button
+                type="button"
+                className={
+                  culturalFilter === "all"
+                    ? styles.activeButtonContainer
+                    : styles.buttonContainer
+                }
+                onClick={() => setCulturalFilter("all")}
+              >
+                All
+              </button>
+              <button
+                type="button"
+                className={
+                  culturalFilter === "drinks"
+                    ? styles.activeButtonContainer
+                    : styles.buttonContainer
+                }
+                onClick={() => setCulturalFilter("drinks")}
+              >
+                Drinks
+              </button>
+              <button
+                type="button"
+                className={
+                  culturalFilter === "food"
+                    ? styles.activeButtonContainer
+                    : styles.buttonContainer
+                }
+                onClick={() => setCulturalFilter("food")}
+              >
+                Food
+              </button>
+              <button
+                type="button"
+                className={
+                  culturalFilter === "landscapes"
+                    ? styles.activeButtonContainer
+                    : styles.buttonContainer
+                }
+                onClick={() => setCulturalFilter("landscapes")}
+              >
+                Landscapes
+              </button>
+              <button
+                type="button"
+                className={
+                  culturalFilter === "museums"
+                    ? styles.activeButtonContainer
+                    : styles.buttonContainer
+                }
+                onClick={() => setCulturalFilter("museums")}
+              >
+                Museums
+              </button>
+            </div>
+            <h3 className={styles.categoryTitle}>Locomotion</h3>
+            <div className={styles.categoryContainer}>
+              <button
+                type="button"
+                className={
+                  locomotionFilter === "all"
+                    ? styles.activeButtonContainer
+                    : styles.buttonContainer
+                }
+                onClick={() => setLocomotionFilter("all")}
+              >
+                All
+              </button>
+              <button
+                type="button"
+                className={
+                  locomotionFilter === "bicycle"
+                    ? styles.activeButtonContainer
+                    : styles.buttonContainer
+                }
+                onClick={() => setLocomotionFilter("bicycle")}
+              >
+                Bicycle
+              </button>
+              <button
+                type="button"
+                className={
+                  locomotionFilter === "bus"
+                    ? styles.activeButtonContainer
+                    : styles.buttonContainer
+                }
+                onClick={() => setLocomotionFilter("bus")}
+              >
+                Bus
+              </button>
+              <button
+                type="button"
+                className={
+                  locomotionFilter === "car"
+                    ? styles.activeButtonContainer
+                    : styles.buttonContainer
+                }
+                onClick={() => setLocomotionFilter("car")}
+              >
+                Car
+              </button>
+              <button
+                type="button"
+                className={
+                  locomotionFilter === "feet"
+                    ? styles.activeButtonContainer
+                    : styles.buttonContainer
+                }
+                onClick={() => setLocomotionFilter("feet")}
+              >
+                Feet
+              </button>
+            </div>
           </div>
         </section>
       ) : null}
