@@ -44,13 +44,11 @@ export default function Header() {
                   <p className={styles.navText}>Profile</p>
                 </>
               ) : (
-                <>
-                  <img
-                    src={avatar}
-                    alt="profile-icon"
-                    className={styles.navIcon}
-                  />
-                </>
+                <img
+                  src={avatar}
+                  alt="profile-icon"
+                  className={styles.navIcon}
+                />
               )
             }
           </NavLink>
@@ -74,13 +72,11 @@ export default function Header() {
                   <p className={styles.navText}>Finder</p>
                 </>
               ) : (
-                <>
-                  <img
-                    src={animalz}
-                    alt="results-icon"
-                    className={styles.navIcon}
-                  />
-                </>
+                <img
+                  src={animalz}
+                  alt="results-icon"
+                  className={styles.navIcon}
+                />
               )
             }
           </NavLink>
@@ -104,13 +100,11 @@ export default function Header() {
                   <p className={styles.navText}>Messenger</p>
                 </>
               ) : (
-                <>
-                  <img
-                    src={message}
-                    alt="message-icon"
-                    className={styles.navIcon}
-                  />
-                </>
+                <img
+                  src={message}
+                  alt="message-icon"
+                  className={styles.navIcon}
+                />
               )
             }
           </NavLink>
@@ -120,13 +114,17 @@ export default function Header() {
             className={
               filterBarActive ? styles.activeNavContent : styles.navContent
             }
-            onClick={() => setFilterBarActive(!filterBarActive)}
           >
-            <img
-              src={filterBarActive ? activeFilter : filter}
-              alt="filter-icon"
-              className={styles.navIcon}
-            />
+            <button
+              type="button"
+              onClick={() => setFilterBarActive(!filterBarActive)}
+            >
+              <img
+                src={filterBarActive ? activeFilter : filter}
+                alt="filter-icon"
+                className={styles.navIcon}
+              />
+            </button>
           </li>
         ) : null}
       </ul>
@@ -134,6 +132,7 @@ export default function Header() {
         <section className={styles.filterContainer}>
           <div className={styles.likeContainer}>
             <button
+              type="button"
               className={
                 favorite ? styles.activeButtonContainer : styles.buttonContainer
               }
@@ -142,6 +141,7 @@ export default function Header() {
               Favorites
             </button>
             <button
+              type="button"
               className={
                 like ? styles.activeButtonContainer : styles.buttonContainer
               }
@@ -153,6 +153,7 @@ export default function Header() {
           <h3 className={styles.categoryTitle}>Language</h3>
           <div className={styles.categoryContainer}>
             <button
+              type="button"
               className={
                 languageFilter === "all"
                   ? styles.activeButtonContainer
@@ -163,6 +164,7 @@ export default function Header() {
               All
             </button>
             <button
+              type="button"
               className={
                 languageFilter === "dutch"
                   ? styles.activeButtonContainer
@@ -173,6 +175,7 @@ export default function Header() {
               Dutch
             </button>
             <button
+              type="button"
               className={
                 languageFilter === "english"
                   ? styles.activeButtonContainer
@@ -183,6 +186,7 @@ export default function Header() {
               English
             </button>
             <button
+              type="button"
               className={
                 languageFilter === "french"
                   ? styles.activeButtonContainer
@@ -193,6 +197,7 @@ export default function Header() {
               French
             </button>
             <button
+              type="button"
               className={
                 languageFilter === "spanish"
                   ? styles.activeButtonContainer
