@@ -3,7 +3,7 @@ import styles from "./ProfilePicturesDisplay.module.css";
 // import { useFetchContext } from "../contexts/FetchContext";
 
 export default function ProfilePicturesDisplay() {
-  //   const { images } = useFetchContext;
+  //   const { images } = useFetchContext();
 
   return (
     <div className={styles.picturesDisplay}>
