@@ -20,7 +20,7 @@ export default function ProfileTopInfos() {
         <div className={styles.mainInfos}>
           <h2>Name, age</h2>
           <div className={styles.animalsInfos}>
-            <img src="" alt="travel animal"/>
+            <img src="" alt="travel animal" />
             <img src="" alt="climate animal" />
           </div>
         </div>
