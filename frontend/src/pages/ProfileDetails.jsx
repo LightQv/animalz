@@ -7,12 +7,11 @@ import ProfileCalendar from "../components/ProfileCalendar";
 
 export default function ProfileDetails() {
   return (
-    <>
-      <div className={styles.empty} />
+    <main className={styles.profileDetailsPage}>
       <ProfileTopInfos />
       <ProfileDescription />
       <ProfileCalendar />
       <ProfilePicturesDisplay />
-    </>
+    </main>
   );
 }
