@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
 
 export default function Home() {
@@ -13,9 +14,11 @@ export default function Home() {
         <button type="button" className={styles.button}>
           Register
         </button>
-        <button type="button" className={styles.button}>
-          Log in
-        </button>
+        <Link to="/profiles-list">
+          <button type="button" className={styles.button}>
+            Log in
+          </button>
+        </Link>
       </div>
     </div>
   );
