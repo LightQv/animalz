@@ -26,6 +26,8 @@ export default function ProfileTopInfos() {
           <div className={styles.animalsInfos}>
             <img src={usersInfos.totem_animal} alt="travel animal" />
             <img src="" alt="climate animal" />
+            <img src="" alt="travel animal" />
+            <img src="" alt="climate animal" />
           </div>
         </div>
       </div>
