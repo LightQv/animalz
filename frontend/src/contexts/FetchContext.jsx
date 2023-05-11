@@ -1,7 +1,6 @@
 import axios from "axios";
 import PropTypes from "prop-types";
-import axios from "axios";
-import { createContext, useState, useEffect, useMemo, useContext, useEffect } from "react";
+import { createContext, useState, useEffect, useMemo, useContext } from "react";
 
 const FetchContext = createContext();
 
@@ -15,6 +14,17 @@ export function FetchContextProvider({ children }) {
   const [randomUsers, setRandomUsers] = useState(null);
   const [images, setImages] = useState([]);
 
+  const getImages = () => {
+    axios("https://api.pexels.com/v1/search?query=voyage", {
+      headers: {
+        Authorization: `${API_KEY}`,
+      },
+    })
+      .then((data) => {
+        setImages(data.data.photos[1]);
+      })
+      .catch((err) => console.error(err));
+  };
   useEffect(() => {
     axios
       .get("http://localhost:4000/users")
