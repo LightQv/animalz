@@ -14,7 +14,7 @@
         "country": "France"
       },
       "picture": {
-        "large": "",
+        "large": "./frontend/src/assets/images/Lucie.jpg",
         "medium": "",
         "thumbnail": ""
       },
