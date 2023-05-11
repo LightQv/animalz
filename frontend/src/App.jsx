@@ -1,13 +1,23 @@
-import Home from "./pages/Home";
-
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import { FetchContextProvider } from "./contexts/FetchContext";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import ProfileDetails from "./pages/ProfileDetails";
+import UserCardsList from "./pages/UserCardsList";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-      <p>coucou</p>
-    </div>
+    <FetchContextProvider>
+      <Header />
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/profiles-list" element={<UserCardsList />} />
+          <Route path="/profile/:id" element={<ProfileDetails />} />
+        </Routes>
+      </div>
+    </FetchContextProvider>
   );
 }
 
