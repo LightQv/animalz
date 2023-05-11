@@ -18,3 +18,7 @@
 body {
   background-color: var(--light-green);
 }
+
+button {
+  border-style: none;
+}
