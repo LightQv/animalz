@@ -1,0 +1,8 @@
+.profileDetailsPage {
+  width: 100%;
+  padding-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
