@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import ProfileTopInfos from "../components/ProfileTopInfos";
 import ProfileDescription from "../components/ProfileDescription";
 import ProfilePicturesDisplay from "../components/ProfilePicturesDisplay";
+import ProfileCalendar from "../components/ProfileCalendar";
 
 export default function ProfileDetails() {
   return (
@@ -10,6 +11,7 @@ export default function ProfileDetails() {
       <Header />
       <ProfileTopInfos />
       <ProfileDescription />
+      <ProfileCalendar />
       <ProfilePicturesDisplay />
     </>
   );
