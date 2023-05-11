@@ -1,7 +1,7 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { useFetchContext } from "../contexts/FetchContext";
 import styles from "./ProfileTopInfos.module.css";
-import { useParams } from "react-router-dom";
 import lizard from "../assets/images/lezard-courbe.png";
 import cat from "../assets/images/chat-noir.png";
 import guepard from "../assets/images/silhouette-feline-guepard.png";
@@ -14,9 +14,6 @@ import fox from "../assets/images/003-renard-assis.png";
 export default function ProfileTopInfos() {
   const { images, randomUsers, usersInfos } = useFetchContext();
   const { id } = useParams();
-
-  console.log(usersInfos[id]);
-  console.log(images);
 
   let totemAnimal = null;
   if (usersInfos[id].totem_animal === "lizard") {
