@@ -1,0 +1,125 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "gender": "female",
+      "name": {
+        "title": "Mrs",
+        "first": "Lucie",
+        "last": "Chevanche"
+      },
+      "location": {
+        "city": "Villeurbanne",
+        "state": "Rhône-Alpes",
+        "country": "France"
+      },
+      "picture": {
+        "large": "./frontend/src/assets/images/Lucie.jpg",
+        "medium": "",
+        "thumbnail": ""
+      },
+      "language": "french",
+      "totem_animal": "cat",
+      "climate_animal": "polar bear", 
+      "cultural_interests": ["food", "landscapes"],
+      "geography_interests": ["Lapland", "Sweden"],
+      "locomotion": ["feet", "bicycle"],
+      "disponibility": [["2023-05-20", "2023-05-25"], ["2023-06-02", "2023-06-05"]],
+      "travel_duration": [2],
+      "budget": [[500, 1000]],
+      "liked_ids": [3, 6],
+      "favorite_ids": [3, 6, 5],
+      "blacklist": []
+    },
+    {
+      "id": 2,
+      "language": "english",
+      "totem_animal": "cat",
+      "climate_animal": "frog", 
+      "cultural_interests": ["drinks", "landscapes"],
+      "geography_interests": ["England", "Scotland"],
+      "locomotion": ["feet", "car"],
+      "disponibility": [["2023-05-21", "2023-05-27"], ["2023-06-10", "2023-06-22"]],
+      "travel_duration": [7],
+      "budget": [[1000, 1500]],
+      "liked_ids": [],
+      "favorite_ids": [],
+      "blacklist": []
+    },
+    {
+      "id": 3,
+      "language": "french",
+      "totem_animal": "cat",
+      "climate_animal": "frog", 
+      "cultural_interests": ["food", "museums"],
+      "geography_interests": ["United States", "Germany"],
+      "locomotion": ["bicycle", "bus"],
+      "disponibility": [["2023-05-20", "2023-05-28"], ["2023-06-02", "2023-06-05"]],
+      "travel_duration": [2],
+      "budget": [[500, 1000]],
+      "liked_ids": [],
+      "favorite_ids": [],
+      "blacklist": []
+    },
+    {
+      "id": 4,
+      "language": "dutch",
+      "totem_animal": "cat",
+      "climate_animal": "frog", 
+      "cultural_interests": ["food", "drinks"],
+      "geography_interests": ["England", "Japan"],
+      "locomotion": ["bus", "bicycle"],
+      "disponibility": [["2023-05-25", "2023-05-31"], ["2023-06-18", "2023-06-24"]],
+      "travel_duration": [5],
+      "budget": [[500, 1000]],
+      "liked_ids": [],
+      "favorite_ids": [],
+      "blacklist": []
+    },
+    {
+      "id": 5,
+      "language": "spanish",
+      "totem_animal": "cat",
+      "climate_animal": "lion", 
+      "cultural_interests": ["drinks", "museums"],
+      "geography_interests": ["China", "Libya"],
+      "locomotion": ["car", "bus"],
+      "disponibility": [["2023-05-01", "2023-05-25"], ["2023-06-19", "2023-06-23"]],
+      "travel_duration": [10],
+      "budget": [[2000, 5000]],
+      "liked_ids": [],
+      "favorite_ids": [],
+      "blacklist": []
+    },
+    {
+      "id": 6,
+      "language": "french",
+      "totem_animal": "cat",
+      "climate_animal": "polar bear", 
+      "cultural_interests": ["food", "landscapes"],
+      "geography_interests": ["Lapland", "Norway"],
+      "locomotion": ["bus", "car"],
+      "disponibility": [["2023-05-20", "2023-05-25"], ["2023-06-02", "2023-06-05"]],
+      "travel_duration": [2],
+      "budget": [[300, 1000]],
+      "liked_ids": [],
+      "favorite_ids": [],
+      "blacklist": []
+    },
+    {
+      "id": 7,
+      "language": "spanish",
+      "totem_animal": "cat",
+      "climate_animal": "fox", 
+      "cultural_interests": ["museums", "drinks"],
+      "geography_interests": ["Germany", "France"],
+      "locomotion": ["bus", "bicycle"],
+      "disponibility": [["2023-05-02", "2023-05-18"], ["2023-05-25", "2023-06-05"]],
+      "travel_duration": [5],
+      "budget": [[1000, 2000]],
+      "liked_ids": [],
+      "favorite_ids": [],
+      "blacklist": []
+    }
+  ]
+}
