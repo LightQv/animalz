@@ -1,6 +1,7 @@
 import axios from "axios";
 import PropTypes from "prop-types";
-import { createContext, useState, useMemo, useContext, useEffect } from "react";
+import axios from "axios";
+import { createContext, useState, useEffect, useMemo, useContext, useEffect } from "react";
 
 const FetchContext = createContext();
 
@@ -10,21 +11,19 @@ const API_KEY = import.meta.env.VITE_PEXELS_API_KEY;
 
 export function FetchContextProvider({ children }) {
   // States
-  const [usersInfos, setUsersInfos] = useState([]);
-  const [randomUsers, setRandomUsers] = useState([]);
+  const [usersInfos, setUsersInfos] = useState(null);
+  const [randomUsers, setRandomUsers] = useState(null);
   const [images, setImages] = useState([]);
 
-  const getImages = () => {
-    axios("https://api.pexels.com/v1/search?query=voyage", {
-      headers: {
-        Authorization: `${API_KEY}`,
-      },
-    })
-      .then((data) => {
-        setImages(data.data.photos[1]);
-      })
-      .catch((err) => console.error(err));
-  };
+  useEffect(() => {
+    axios
+      .get("http://localhost:4000/users")
+      .then((response) => setUsersInfos(response.data));
+
+    axios
+      .get("https://randomuser.me/api/?results=8")
+      .then((response) => setRandomUsers(response.data.results));
+  }, []);
 
   // Memo pour optimisation => empêche les rerenders intempestifs au moindre changement de state
   //  - Passer les getter et setter de vos states entre les accolades, et le getter dans le tableau
