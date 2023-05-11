@@ -1,19 +1,16 @@
-// import React, { useEffect } from "react";
-// import axios from "axios";
 import styles from "./UserCardsList.module.css";
-// import UserCard from "../components/UserCard";
+import UserCard from "../components/UserCard";
+import { useFetchContext } from "../contexts/FetchContext";
 
 export default function UserCardsList() {
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:4000/users")
-  //     .then(response => console.log(response.data));
-  //     .catch(error => console.log(error))
-  // }, []);
+  const { usersInfos } = useFetchContext();
 
   return (
     <div className={styles.userCardList}>
       <h1>UserCardsList</h1>
+      {usersInfos.map((user) => {
+        return <UserCard user={user} />;
+      })}
     </div>
   );
 }
