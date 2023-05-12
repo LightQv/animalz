@@ -7,7 +7,6 @@ export default function Home() {
   const onClickHandle = () => {
     setShowModal(true);
   };
-
   return (
     <div className={styles.homePage}>
       <AnimalChoices showModal={showModal} />
