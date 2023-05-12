@@ -48,6 +48,7 @@ export default function UserCard({ user }) {
             />
           ) : null}
         </div>
+        {/* Les icones "liked" et "favorite" n'apparaissent que si l'identifiant de l'utilisateur est présent dans ses propriétés "liked_ids" et "favorite_ids" */}
         {usersInfos[0].liked_ids.includes(user.id) ||
         usersInfos[0].favorite_ids.includes(user.id) ? (
           <div className={styles.featuresContainer}>
