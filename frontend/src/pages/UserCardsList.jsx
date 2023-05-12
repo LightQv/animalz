@@ -44,7 +44,7 @@ export default function UserCardsList() {
         {randomUsers &&
           filteredUsers &&
           filteredUsers.map((user) => {
-            if (user.id !== 1) {
+            if (user.id !== 0) {
               return <UserCard key={user.id} user={user} />;
             }
             return null;

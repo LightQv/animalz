@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { useFetchContext } from "../contexts/FetchContext";
+import { useFiltersContext } from "../contexts/FiltersContext";
 import styles from "./UserCard.module.css";
 import liked from "../assets/icons/liked.png";
 import favorite from "../assets/icons/favorite.png";
@@ -12,6 +13,8 @@ import fox from "../assets/images/003-renard-assis.png";
 
 export default function UserCard({ user }) {
   const { usersInfos, randomUsers } = useFetchContext();
+  const { setShowFilterPage } = useFiltersContext();
+
   let climateAnimal = null;
   if (user.climate_animal === "lion") {
     climateAnimal = lion;
@@ -24,7 +27,7 @@ export default function UserCard({ user }) {
   }
 
   return (
-    <Link to={`/profile/${user.id - 1}`}>
+    <Link to={`/profile/${user.id}`} onClick={() => setShowFilterPage(false)}>
       <div
         className={styles.userCard}
         style={{
