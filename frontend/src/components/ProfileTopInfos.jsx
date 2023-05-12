@@ -12,6 +12,7 @@ import lion from "../assets/images/001-lion.png";
 import fox from "../assets/images/003-renard-assis.png";
 import liked from "../assets/icons/liked.png";
 import favorite from "../assets/icons/favorite.png";
+import editProfile from "../assets/icons/001-edit.png";
 import lucie from "../assets/images/Lucie.jpg";
 
 export default function ProfileTopInfos() {
@@ -89,6 +90,11 @@ export default function ProfileTopInfos() {
           alt="profile-pic"
           className={styles.profileImg}
         />
+        {id === "0" ? (
+          <button type="button" className={styles.editImg}>
+            <img src={editProfile} alt="edit the profile" />
+          </button>
+        ) : null}
         <div className={styles.mainInfos}>
           <h3>
             {usersInfos[id].name
