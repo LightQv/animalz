@@ -12,7 +12,7 @@ import lion from "../assets/images/001-lion.png";
 import fox from "../assets/images/003-renard-assis.png";
 
 export default function ProfileTopInfos() {
-  const { images, randomUsers, usersInfos } = useFetchContext();
+  const { coverImage, randomUsers, usersInfos } = useFetchContext();
   const { id } = useParams();
 
   let totemAnimal = null;
@@ -41,7 +41,7 @@ export default function ProfileTopInfos() {
     <div
       className={styles.coverPicture}
       style={{
-        backgroundImage: `url(${images.src.large2x})`,
+        backgroundImage: `url(${coverImage.src.large2x})`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundSize: "cover",
