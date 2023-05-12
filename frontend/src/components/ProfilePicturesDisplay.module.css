@@ -1,0 +1,17 @@
+.picturesDisplay ul {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    list-style-type: none;
+}
+
+.picturesDisplay img {
+    height: 100%;
+    width: 100%;
+}
+
+.picturesDisplay li {
+    height: 100px;
+    width: 100px;
+}
