@@ -72,7 +72,7 @@ export default function ProfileDescription() {
             ))}
           </ul>
         </h5>
-        <h5>My budget: {`${budget[0]} - ${budget[1]}`}</h5>
+        <h5>My budget: {`${budget[0]} - ${budget[1]} €`}</h5>
         <h5>Availability for travel: {travelDuration} days</h5>
       </div>
     )
