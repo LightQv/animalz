@@ -4,6 +4,7 @@ import ProfileTopInfos from "../components/ProfileTopInfos";
 import ProfileDescription from "../components/ProfileDescription";
 import ProfilePicturesDisplay from "../components/ProfilePicturesDisplay";
 import ProfileCalendar from "../components/ProfileCalendar";
+import InterestPoints from "../components/InterestPoints";
 
 export default function ProfileDetails() {
   return (
@@ -12,6 +13,7 @@ export default function ProfileDetails() {
       <ProfileDescription />
       <ProfileCalendar />
       <ProfilePicturesDisplay />
+      <InterestPoints />
     </main>
   );
 }

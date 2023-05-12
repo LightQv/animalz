@@ -1,6 +1,6 @@
 .calendar {
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
-    margin-inline: 50px;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-inline: 50px;
 }
