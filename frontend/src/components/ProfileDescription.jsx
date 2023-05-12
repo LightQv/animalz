@@ -26,7 +26,8 @@ export default function ProfileDescription() {
   return (
     usersInfos && (
       <div className={styles.description}>
-        <h3>
+        <h3 className={styles.categoryTitle}>Description</h3>
+        <p className={styles.location}>
           {usersInfos[id].location
             ? usersInfos[id].location.city
             : randomUsers[id].location.city}
@@ -34,46 +35,48 @@ export default function ProfileDescription() {
           {usersInfos[id].location
             ? usersInfos[id].location.country
             : randomUsers[id].location.country}
-        </h3>
+        </p>
         <h4>
-          Speaks:{" "}
+          <span>I speak</span>{" "}
           {language.charAt(0).toUpperCase() + language.slice(1).toLowerCase()}
         </h4>
-        <h5>
-          Things I'm interested in:{" "}
-          <ul>
-            {culuralInterests.map((el) => (
-              <li key={el}>
-                {el.charAt(0).toUpperCase()}
-                {el.slice(1).toLowerCase()}
-              </li>
-            ))}
-          </ul>
-        </h5>
-        <h5>
-          Places I want to visit:{" "}
-          <ul>
-            {geoInterests.map((el) => (
-              <li key={el}>
-                {el.charAt(0).toUpperCase()}
-                {el.slice(1).toLowerCase()}
-              </li>
-            ))}
-          </ul>
-        </h5>
-        <h5>
-          How I want to travel:{" "}
-          <ul>
-            {locomotion.map((el) => (
-              <li key={el}>
-                {el.charAt(0).toUpperCase()}
-                {el.slice(1).toLowerCase()}
-              </li>
-            ))}
-          </ul>
-        </h5>
-        <h5>My budget: {`${budget[0]} - ${budget[1]} €`}</h5>
-        <h5>Availability for travel: {travelDuration} days</h5>
+        <div>
+          <div>
+            <h5>I'm interested in :</h5>
+            <ul>
+              {culuralInterests.map((el) => (
+                <li key={el}>
+                  {el.charAt(0).toUpperCase()}
+                  {el.slice(1).toLowerCase()}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h5>I'd like to visit :</h5>
+            <ul>
+              {geoInterests.map((el) => (
+                <li key={el}>
+                  {el.charAt(0).toUpperCase()}
+                  {el.slice(1).toLowerCase()}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h5>I want to travel by :</h5>
+            <ul>
+              {locomotion.map((el) => (
+                <li key={el}>
+                  {el.charAt(0).toUpperCase()}
+                  {el.slice(1).toLowerCase()}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <h5>My budget : {`${budget[0]} - ${budget[1]} €`}</h5>
+          <h5>Availability for travel : {travelDuration} days</h5>
+        </div>
       </div>
     )
   );
