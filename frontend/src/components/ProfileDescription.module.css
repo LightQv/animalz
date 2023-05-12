@@ -3,9 +3,9 @@
   top: -4.75rem;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   margin: 2.5rem;
   padding: 1rem 2rem;
   border-top: 0.5px solid grey;
@@ -14,6 +14,31 @@
 
 .description span {
   font-style: italic;
+}
+
+.likeFavButtons {
+  position: relative;
+  top: -2.5rem;
+  right: 0;
+  align-self: flex-start;
+}
+
+.likeButton,
+.favButton {
+  border-radius: 1.5rem;
+  height: 3rem;
+  width: 3rem;
+  border: 1px solid var(--white);
+  background-color: white;
+}
+
+.favButton {
+  margin-left: 0.25rem;
+}
+
+.liked,
+.favorite {
+  width: 1.75rem;
 }
 
 .categoryTitle {

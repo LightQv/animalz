@@ -10,8 +10,6 @@ import bear from "../assets/images/004-silhouette-vue-ct-ours.png";
 import frog from "../assets/images/002-frop-tropical.png";
 import lion from "../assets/images/001-lion.png";
 import fox from "../assets/images/003-renard-assis.png";
-import liked from "../assets/icons/liked.png";
-import favorite from "../assets/icons/favorite.png";
 import lucie from "../assets/images/Lucie.jpg";
 
 export default function ProfileTopInfos() {
@@ -48,42 +46,6 @@ export default function ProfileTopInfos() {
         className={styles.coverPicture}
       />
       <div className={styles.topInfos}>
-        {id !== "0" ? (
-          <button
-            type="button"
-            onClick={() => {
-              if (!usersInfos[0].liked_ids.includes(id)) {
-                usersInfos[0].liked_ids.push(id);
-              } else {
-                usersInfos[0].liked_ids.splice(
-                  usersInfos[0].liked_ids.indexOf(id),
-                  1
-                );
-              }
-            }}
-          >
-            Like
-            <img className={styles.liked} src={liked} alt="liked" />
-          </button>
-        ) : null}
-        {id !== "0" ? (
-          <button
-            type="button"
-            onClick={() => {
-              if (!usersInfos[0].favorite_ids.includes(id)) {
-                usersInfos[0].favorite_ids.push(id);
-              } else {
-                usersInfos[0].favorite_ids.splice(
-                  usersInfos[0].favorite_ids.indexOf(id),
-                  1
-                );
-              }
-            }}
-          >
-            Favorite
-            <img className={styles.favorite} src={favorite} alt="favorite" />
-          </button>
-        ) : null}
         <img
           src={`${id === "0" ? lucie : randomUsers[id].picture.large}`}
           alt="profile-pic"
