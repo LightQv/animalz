@@ -17,6 +17,7 @@ export default function UserCardsList() {
     setFilteredUsers(usersInfos);
   }, []);
 
+  // mise en place du state filtrant les utilisateurs à afficher selon s'ils sont likés ou favoris par l'utilisateur
   useEffect(() => {
     if (isFavoriteFiltered || isLikedFiltered) {
       if (isFavoriteFiltered) {

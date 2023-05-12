@@ -12,11 +12,11 @@
   --dark-green: rgb(61, 111, 55);
   --light-green: rgb(158, 183, 155);
   --yellow: rgb(255, 199, 66);
-  --white: rgb(240, 240, 240);
+  --white: rgb(245, 245, 245);
 }
 
 body {
-  background-color: var(--light-green);
+  background-color: var(--white);
 }
 
 button {
