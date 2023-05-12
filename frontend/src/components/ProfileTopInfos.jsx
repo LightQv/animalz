@@ -58,7 +58,7 @@ export default function ProfileTopInfos() {
               <img
                 src={editProfile}
                 alt="edit the profile"
-                className={styles.editImg}
+                className={styles.editProfile}
               />
             </button>
           ) : null}

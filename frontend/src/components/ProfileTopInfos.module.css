@@ -36,16 +36,18 @@
 }
 
 .editImgButton {
+  position: relative;
+  top: -2.5rem;
   align-self: flex-end;
   border-radius: 1.5rem;
-  height: 3rem;
-  width: 3rem;
+  height: 2.5rem;
+  width: 2.5rem;
   border: 1px solid var(--white);
   background-color: white;
 }
 
-.editImg {
-  width: 1.75rem;
+.editProfile {
+  width: 1.5rem;
 }
 
 .mainInfos h3 {
