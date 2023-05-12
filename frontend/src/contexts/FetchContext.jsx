@@ -14,26 +14,30 @@ export function FetchContextProvider({ children }) {
   const [randomUsers, setRandomUsers] = useState(null);
   const [images, setImages] = useState([]);
   const randomPhoto = Math.floor(Math.random() * 5);
+  const [coverImage, setCoverImage] = useState([]);
 
-  const getImages = () => {
+  const getCoverImage = () => {
     axios("https://api.pexels.com/v1/search?query=voyage", {
       headers: {
         Authorization: `${API_KEY}`,
       },
     })
       .then((data) => {
-        setImages(data.data.photos[randomPhoto]);
+        setCoverImage(data.data.photos[randomPhoto]);
       })
       .catch((err) => console.error(err));
   };
+
   useEffect(() => {
     axios
       .get("http://localhost:4000/users")
-      .then((response) => setUsersInfos(response.data));
+      .then((response) => setUsersInfos(response.data))
+      .catch((err) => console.error(err));
 
     axios
       .get("https://randomuser.me/api/?results=8")
-      .then((response) => setRandomUsers(response.data.results));
+      .then((response) => setRandomUsers(response.data.results))
+      .catch((err) => console.error(err));
   }, []);
 
   // Memo pour optimisation => empêche les rerenders intempestifs au moindre changement de state
@@ -47,10 +51,14 @@ export function FetchContextProvider({ children }) {
       setRandomUsers,
       images,
       setImages,
+      coverImage,
+      setCoverImage,
+      API_KEY,
     }),
-    [usersInfos, randomUsers, images]
+    [usersInfos, randomUsers, images, coverImage]
   );
-  useEffect(getImages, []);
+
+  useEffect(getCoverImage, []);
 
   return (
     <FetchContext.Provider value={value}>{children}</FetchContext.Provider>
