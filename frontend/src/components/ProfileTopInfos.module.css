@@ -35,6 +35,19 @@
   color: var(--dark-green);
 }
 
+.editImgButton {
+  align-self: flex-end;
+  border-radius: 1.5rem;
+  height: 3rem;
+  width: 3rem;
+  border: 1px solid var(--white);
+  background-color: white;
+}
+
+.editImg {
+  width: 1.75rem;
+}
+
 .mainInfos h3 {
   line-height: 0.7;
 }
