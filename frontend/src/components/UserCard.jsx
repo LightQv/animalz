@@ -24,7 +24,7 @@ export default function UserCard({ user }) {
   }
 
   return (
-    <Link to={`/profile/${user.id}`}>
+    <Link to={`/profile/${user.id - 1}`}>
       <div
         className={styles.userCard}
         style={{
