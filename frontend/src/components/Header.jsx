@@ -12,7 +12,6 @@ import activeFilter from "../assets/icons/filter-active.png";
 import styles from "./Header.module.css";
 
 export default function Header() {
-  const [showFilterPage, setShowFilterPage] = useState(true);
   const [filterBarActive, setFilterBarActive] = useState(false);
   const [languageFilter, setLanguageFilter] = useState("all");
   const [animalFilter, setAnimalFilter] = useState("all");
@@ -23,6 +22,8 @@ export default function Header() {
     isLikedFiltered,
     setIsFavoriteFiltered,
     isFavoriteFiltered,
+    showFilterPage,
+    setShowFilterPage,
   } = useFiltersContext();
 
   const handleChangePage = () => {
