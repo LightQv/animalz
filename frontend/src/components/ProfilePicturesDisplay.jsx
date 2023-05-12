@@ -32,6 +32,7 @@ export default function ProfilePicturesDisplay() {
 
   return (
     <div className={styles.picturesDisplay}>
+      <h3 className={styles.categoryTitle}>My album</h3>
       <ul>
         {images.map((image) => (
           <li key={image.id}>

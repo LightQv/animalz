@@ -13,7 +13,10 @@ export default function ProfileDetails() {
       <ProfileDescription />
       <ProfileCalendar />
       <ProfilePicturesDisplay />
-      <InterestPoints />
+      <div className={styles.mapDisplay}>
+        <h3 className={styles.categoryTitle}>Places I'd like to visit :</h3>
+        <InterestPoints />
+      </div>
     </main>
   );
 }
