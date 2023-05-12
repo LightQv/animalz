@@ -23,7 +23,7 @@ export function FetchContextProvider({ children }) {
       },
     })
       .then((data) => {
-        setCoverImage(data.data.photos[randomPhoto]);
+        setCoverImage(data.data.photos);
       })
       .catch((err) => console.error(err));
   };
