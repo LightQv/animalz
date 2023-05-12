@@ -13,6 +13,7 @@ export function FetchContextProvider({ children }) {
   const [usersInfos, setUsersInfos] = useState(null);
   const [randomUsers, setRandomUsers] = useState(null);
   const [images, setImages] = useState([]);
+  const randomPhoto = Math.floor(Math.random() * 5);
 
   const getImages = () => {
     axios("https://api.pexels.com/v1/search?query=voyage", {
@@ -21,7 +22,7 @@ export function FetchContextProvider({ children }) {
       },
     })
       .then((data) => {
-        setImages(data.data.photos[1]);
+        setImages(data.data.photos[randomPhoto]);
       })
       .catch((err) => console.error(err));
   };
