@@ -14,7 +14,7 @@ import editProfile from "../assets/icons/001-edit.png";
 import lucie from "../assets/images/Lucie.jpg";
 
 export default function ProfileTopInfos() {
-  const { images, randomUsers, usersInfos } = useFetchContext();
+  const { coverImage, randomUsers, usersInfos } = useFetchContext();
   const { id } = useParams();
 
   let totemAnimal = null;
@@ -42,7 +42,7 @@ export default function ProfileTopInfos() {
   return (
     <div className={styles.topDescription}>
       <img
-        src={images.src.large2x}
+        src={coverImage.src.large2x}
         alt="cover-img"
         className={styles.coverPicture}
       />
