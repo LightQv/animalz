@@ -10,6 +10,7 @@ export function FiltersContextProvider({ children }) {
   const [isFavoriteFiltered, setIsFavoriteFiltered] = useState(false);
   const [isLikedFiltered, setIsLikedFiltered] = useState(false);
   const [filteredUsers, setFilteredUsers] = useState(null);
+  const [showFilterPage, setShowFilterPage] = useState(true);
 
   // Memo pour optimisation => empêche les rerenders intempestifs au moindre changement de state
   //  - Passer les getter et setter de vos states entre les accolades, et le getter dans le tableau
@@ -22,8 +23,10 @@ export function FiltersContextProvider({ children }) {
       setIsLikedFiltered,
       filteredUsers,
       setFilteredUsers,
+      showFilterPage,
+      setShowFilterPage,
     }),
-    [isFavoriteFiltered, isLikedFiltered, filteredUsers]
+    [isFavoriteFiltered, isLikedFiltered, filteredUsers, showFilterPage]
   );
 
   return (
