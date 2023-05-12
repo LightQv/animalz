@@ -1,6 +1,12 @@
 .calendar {
+  position: relative;
+  top: -4.75rem;
+  width: calc(100% - 2rem);
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 25px;
-  margin-inline: 50px;
+  align-items: flex-start;
+  margin: 2rem;
+  border: 1px solid grey;
+  background-color: white;
 }
