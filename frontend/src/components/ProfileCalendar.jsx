@@ -12,6 +12,7 @@ export default function ProfileCalendar() {
   return (
     usersInfos && (
       <div className={styles.calendar}>
+        <h3 className={styles.categoryTitle}>My availabilities</h3>
         <Calendar value={usersInfos[id].disponibility[0]} />
       </div>
     )

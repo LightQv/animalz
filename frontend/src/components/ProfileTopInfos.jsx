@@ -53,12 +53,16 @@ export default function ProfileTopInfos() {
           alt="profile-pic"
           className={styles.profileImg}
         />
-        {id === "0" ? (
-          <button type="button" className={styles.editImg}>
-            <img src={editProfile} alt="edit the profile" />
-          </button>
-        ) : null}
         <div className={styles.mainInfos}>
+          {id === "0" ? (
+            <button type="button" className={styles.editImgButton}>
+              <img
+                src={editProfile}
+                alt="edit the profile"
+                className={styles.editProfile}
+              />
+            </button>
+          ) : null}
           <h3>
             {usersInfos[id].name
               ? usersInfos[id].name.first

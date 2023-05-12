@@ -35,6 +35,21 @@
   color: var(--dark-green);
 }
 
+.editImgButton {
+  position: relative;
+  top: -2.5rem;
+  align-self: flex-end;
+  border-radius: 1.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 1px solid var(--white);
+  background-color: white;
+}
+
+.editProfile {
+  width: 1.5rem;
+}
+
 .mainInfos h3 {
   line-height: 0.7;
 }

@@ -1,8 +1,6 @@
 .map {
-  height: 18vh;
-  width: 77vw;
-  margin-top: 25px;
-  margin-inline: 50px;
+  height: 11rem;
+  width: 100%;
   display: flex;
   justify-content: center;
   border-radius: 8px;
