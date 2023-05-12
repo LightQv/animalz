@@ -2,20 +2,19 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useFetchContext } from "../contexts/FetchContext";
 import styles from "./ProfileTopInfos.module.css";
-import lizard from "../assets/images/lezard-courbe.png";
-import cat from "../assets/images/chat-noir.png";
-import guepard from "../assets/images/silhouette-feline-guepard.png";
-import turtle from "../assets/images/tortue-face-a-droite.png";
+import lizard from "../assets/images/007-lzard-courb.png";
+import cat from "../assets/images/007-chat-noir.png";
+import guepard from "../assets/images/008-silhouette-fline-gupard.png";
+import turtle from "../assets/images/008-tortue-face-droite.png";
 import bear from "../assets/images/004-silhouette-vue-ct-ours.png";
 import frog from "../assets/images/002-frop-tropical.png";
 import lion from "../assets/images/001-lion.png";
 import fox from "../assets/images/003-renard-assis.png";
-import liked from "../assets/icons/liked.png";
-import favorite from "../assets/icons/favorite.png";
+import editProfile from "../assets/icons/001-edit.png";
 import lucie from "../assets/images/Lucie.jpg";
 
 export default function ProfileTopInfos() {
-  const { images, randomUsers, usersInfos } = useFetchContext();
+  const { coverImage, randomUsers, usersInfos } = useFetchContext();
   const { id } = useParams();
 
   let totemAnimal = null;
@@ -39,60 +38,31 @@ export default function ProfileTopInfos() {
   } else if (usersInfos[id].climate_animal === "fox") {
     climateAnimal = fox;
   }
+  const randomPhoto = Math.floor(Math.random() * 5);
 
   return (
-    <div
-      className={styles.coverPicture}
-      style={{
-        backgroundImage: `url(${images.src.large2x})`,
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-      }}
-    >
+    <div className={styles.topDescription}>
+      <img
+        src={coverImage[randomPhoto].src.large2x}
+        alt="cover-img"
+        className={styles.coverPicture}
+      />
       <div className={styles.topInfos}>
-        {id !== "0" ? (
-          <button
-            type="button"
-            onClick={() => {
-              if (!usersInfos[0].liked_ids.includes(id)) {
-                usersInfos[0].liked_ids.push(id);
-              } else {
-                usersInfos[0].liked_ids.splice(
-                  usersInfos[0].liked_ids.indexOf(id),
-                  1
-                );
-              }
-            }}
-          >
-            Like
-            <img className={styles.liked} src={liked} alt="liked" />
-          </button>
-        ) : null}
-        {id !== "0" ? (
-          <button
-            type="button"
-            onClick={() => {
-              if (!usersInfos[0].favorite_ids.includes(id)) {
-                usersInfos[0].favorite_ids.push(id);
-              } else {
-                usersInfos[0].favorite_ids.splice(
-                  usersInfos[0].favorite_ids.indexOf(id),
-                  1
-                );
-              }
-            }}
-          >
-            Favorite
-            <img className={styles.favorite} src={favorite} alt="favorite" />
-          </button>
-        ) : null}
         <img
           src={`${id === "0" ? lucie : randomUsers[id].picture.large}`}
           alt="profile-pic"
           className={styles.profileImg}
         />
         <div className={styles.mainInfos}>
+          {id === "0" ? (
+            <button type="button" className={styles.editImgButton}>
+              <img
+                src={editProfile}
+                alt="edit the profile"
+                className={styles.editProfile}
+              />
+            </button>
+          ) : null}
           <h3>
             {usersInfos[id].name
               ? usersInfos[id].name.first
