@@ -13,7 +13,6 @@ export function FetchContextProvider({ children }) {
   const [usersInfos, setUsersInfos] = useState(null);
   const [randomUsers, setRandomUsers] = useState(null);
   const [images, setImages] = useState([]);
-  const randomPhoto = Math.floor(Math.random() * 5);
   const [coverImage, setCoverImage] = useState([]);
 
   const getCoverImage = () => {
@@ -23,7 +22,7 @@ export function FetchContextProvider({ children }) {
       },
     })
       .then((data) => {
-        setCoverImage(data.data.photos[randomPhoto]);
+        setCoverImage(data.data.photos);
       })
       .catch((err) => console.error(err));
   };

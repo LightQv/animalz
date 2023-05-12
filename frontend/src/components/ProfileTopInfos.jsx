@@ -38,11 +38,12 @@ export default function ProfileTopInfos() {
   } else if (usersInfos[id].climate_animal === "fox") {
     climateAnimal = fox;
   }
+  const randomPhoto = Math.floor(Math.random() * 5);
 
   return (
     <div className={styles.topDescription}>
       <img
-        src={coverImage.src.large2x}
+        src={coverImage[randomPhoto].src.large2x}
         alt="cover-img"
         className={styles.coverPicture}
       />
