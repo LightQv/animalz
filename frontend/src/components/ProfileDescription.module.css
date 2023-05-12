@@ -1,25 +1,59 @@
 .description {
   position: relative;
   top: -4.75rem;
-  width: calc(100% - 2rem);
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 2rem;
-  padding: 2rem;
-  border: 1px solid var(--yellow);
-  border-radius: 1rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2.5rem;
+  padding: 1rem 2rem;
+  border-top: 0.5px solid grey;
+  border-bottom: 0.5px solid grey;
 }
 
-.description h3 {
-  color: var(--black);
-  align-self: flex-start;
-  font-size: 1rem;
+.description span {
   font-style: italic;
 }
 
+.likeFavButtons {
+  position: relative;
+  top: -2.5rem;
+  right: 0;
+  align-self: flex-start;
+}
+
+.likeButton,
+.favButton {
+  border-radius: 1.5rem;
+  height: 3rem;
+  width: 3rem;
+  border: 1px solid var(--white);
+  background-color: white;
+}
+
+.favButton {
+  margin-left: 0.25rem;
+}
+
+.liked,
+.favorite {
+  width: 1.75rem;
+}
+
+.categoryTitle {
+  color: var(--dark-green);
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.location {
+  color: var(--light-green);
+  align-self: flex-start;
+  font-size: 1rem;
+  /* font-style: italic; */
+}
+
 .description ul {
-  /* margin-top: 5px;
-  margin-left: 25px; */
+  list-style: none;
 }
