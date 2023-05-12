@@ -10,8 +10,6 @@ import bear from "../assets/images/004-silhouette-vue-ct-ours.png";
 import frog from "../assets/images/002-frop-tropical.png";
 import lion from "../assets/images/001-lion.png";
 import fox from "../assets/images/003-renard-assis.png";
-import liked from "../assets/icons/liked.png";
-import favorite from "../assets/icons/favorite.png";
 import editProfile from "../assets/icons/001-edit.png";
 import lucie from "../assets/images/Lucie.jpg";
 
